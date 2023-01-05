@@ -3,7 +3,6 @@
     width: 100%;
     height: 150px;
 }
-
 .row{
     display:flex;
     align-items: center;
@@ -18,6 +17,57 @@
     background-color: #30988C;
     color:white;
 }
+// @ carosle================================================================
+
+.main-carousel{
+    
+    .carousel{
+       
+        .carousel-inner{
+            
+            img{
+                width: 100%;
+                height: 500px;
+            }
+        }
+    }
+}
+
+
+
+
+// @ product================================================================
+.product{
+    width: 100%;
+    height: 100%;
+    .container{
+        width: 100%;
+        height: 100%;
+        .card{
+            img{
+                width: 100%;
+                height: 220px;
+            }
+            .card-body{
+                height: 120px;
+                i{
+                    color:#FFC107;
+                }
+                p{
+                    color: #069550;
+                    font-size: 12px;
+                }
+            }
+        }
+        .card:hover{
+            transform:scale(1.05);
+            transition: all 0.2s;
+        }
+    }
+}
+
+
+
 
 /* // Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
@@ -30,6 +80,37 @@
         flex: 0 0 auto;
         width: 90%;
     }
+    .main-carousel{
+    
+        .carousel{
+           
+            .carousel-inner{
+                
+                img{
+                    width: 100%;
+                    height: 260px;
+                }
+            }
+        }
+    }
+
+    // .row-cols-2{
+    //     .col{
+    //         .card{
+    //             img{
+    //                 height: 160px;
+    //             }
+    //             .card-body{
+                    
+    //                 p{
+    //                     font-size: 10px;
+    //                 }
+    //             }
+                
+    //         }
+    //     }
+    // }
+    
 }
 
 /* // Small devices (landscape phones, 576px and up) */
@@ -42,6 +123,8 @@
         flex: 0 0 auto;
         width: 100%;
     }
+  
+    
 }
 
 /* // Medium devices (tablets, 768px and up) */
