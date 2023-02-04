@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Camshop/static/css/main.66336876.css",
+    "main.js": "/Camshop/static/js/main.c8957e34.js",
+    "static/js/787.5cf21e66.chunk.js": "/Camshop/static/js/787.5cf21e66.chunk.js",
+    "index.html": "/Camshop/index.html",
+    "main.66336876.css.map": "/Camshop/static/css/main.66336876.css.map",
+    "main.c8957e34.js.map": "/Camshop/static/js/main.c8957e34.js.map",
+    "787.5cf21e66.chunk.js.map": "/Camshop/static/js/787.5cf21e66.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.66336876.css",
+    "static/js/main.c8957e34.js"
+  ]
+}
