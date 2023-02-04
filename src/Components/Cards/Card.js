@@ -2,6 +2,7 @@ import "./Card.scss";
 import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useState } from "react";
+import Product from "../Home/Product";
 
 const Card = () => {
   const [selectedImg, setSelectedImg] = useState(0);
@@ -9,6 +10,7 @@ const Card = () => {
   const { id } = useParams();
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [arrival, setArrival] = useState([]);
 
   useEffect(() => {
     product();
@@ -20,6 +22,22 @@ const Card = () => {
       const json = await res.json();
       setLoading(true);
       setData(json);
+    } catch (err) {}
+  };
+
+  // @arrival================================================
+  useEffect(() => {
+    arrivalData();
+  }, []);
+  const arrivalData = async () => {
+    try {
+      const response = await fetch("http://localhost:1337/api/arrivals");
+      const json = await response.json();
+      const arrival = json.data;
+
+      // console.log(data[0].attributes);
+      // console.log("===>arr",arrival);
+      setArrival(arrival);
     } catch (err) {}
   };
 
@@ -114,6 +132,36 @@ const Card = () => {
           </div>
         </div>
       </div> */}
+
+      {/* @ New Arrivals================================================ */}
+      <section className="Arrivals product mt-3 ">
+        <div className="text-center">
+          <h2>New Arrivals</h2>
+        </div>
+        <div className="container ">
+          {loading ? (
+            loading
+          ) : (
+            <div className="justify-content-center my-2 d-flex">
+              <div className=" spinner-border " role="status">
+                <span className="visually-hidden text-center">Loading...</span>
+              </div>
+            </div>
+          )}
+          <div class="row h-100 row-cols-2 row-cols-lg-4  g-2  g-lg-3 ">
+            {arrival.map((results) => (
+              <div key={results.index}>
+                <Product
+                  title={results.attributes.title}
+                  img={results.attributes.img}
+                  price={results.attributes.price}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* @ End New Arrivals================================================ */}
     </div>
   );
 };

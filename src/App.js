@@ -59,7 +59,7 @@ const App = () => {
       {/* ================================================ */}
 
       {/* <!-- Footer --> */}
-      <footer className="home text-center mt-5 text-lg-start   bg-white text-muted">
+      <footer className="home text-center text-lg-start   bg-white text-muted">
         {/* <!-- Section: Social media --> */}
         <section className="bg-danger m-auto d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
           {/* <!-- Left --> */}

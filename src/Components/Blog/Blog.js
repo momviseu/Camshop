@@ -10,22 +10,79 @@ const Blog = () => {
 
   const [items, setItems] = useState([]);
   const fetchitems = async () => {
-    const data = await fetch(
-      "https://api.pujakaitem.com/api/products"
-    );
+    const data = await fetch("https://api.pujakaitem.com/api/products");
     const itemsdata = await data.json();
     // console.log(itemsdata.data);
     setItems(itemsdata);
   };
   return (
     <div>
-      <h1>Blog</h1>
+      <footer className="bg-dark ">
+        <img src="../img/b19.jpg" className="w-100" height="250px" alt="" />
+        <div className="title">
+          <h1>#Readmore</h1>
+          <p>Read all case studies about our products!</p>
+        </div>
+      </footer>
 
-      {items.map((item) => (
-        <h1 >
-          <Link to={`/testBlog/${item.id}`}>{item.id}</Link>
-        </h1>
-      ))}
+      <div className="container mt-5  px-1">
+        <div className="row my-5 gx-2 h-100">
+          <div className="col-md-4">
+            <img
+              src="../img/h (1).jpg"
+              className="img-responsive"
+              height="300px"
+              width="400px"
+              alt=""
+            />
+          </div>
+          <div className="col-md-8">
+            <p className="text-success">The Cotton-Jersey Zip-Up Hoodie</p>
+            <p className="text-secondary">kickstarter man braid godard coloring book. Racletter
+            waistcoat selfies yr wolf chartreuse hexagon irony. godard...</p>
+            <h4>CONTINUE READING</h4>
+          </div>
+        </div>
+
+        <div className="row gx-2 h-100">
+          <div className="col-md-4">
+            <img
+              src="../img/h (2).jpg"
+              className="img-responsive"
+              height="300px"
+              width="400px"
+              alt=""
+            />
+          </div>
+          <div className="col-md-8">
+            <p className="text-success">How to Style a Quiff</p>
+            <p className="text-secondary">
+              kickstarter man braid godard coloring book. Racletter waistcoat
+              selfies yr wolf chartreuse hexagon irony. godard...
+            </p>
+
+            <h4>CONTINUE READING</h4>
+          </div>
+        </div>
+
+        <div className="row my-5 gx-2 h-100">
+          <div className="col-md-4">
+            <img
+              src="../img/h (3).jpg"
+              className="img-responsive"
+              height="300px"
+              width="400px"
+              alt=""
+            />
+          </div>
+          <div className="col-md-8">
+            <p className="text-success">Must-Have Skater Girl Items</p>
+            <p className="text-secondary">kickstarter man braid godard coloring book. Racletter
+            waistcoat selfies yr wolf chartreuse hexagon irony. godard...</p>
+            <h4>CONTINUE READING</h4>
+          </div>
+        </div>
+      </div>
 
       {/* address================================================================ */}
       <div className="main-home mt-5 ">

@@ -73,7 +73,7 @@ const Navbar = () => {
                 </Link>
                 </a>
                 <a className="text-reset me-3 ShoppingCartIcon" href="#">
-                <Link to="" >
+                <Link to="/order/:id" >
                     <ShoppingCartIcon/>
                     <span className="icon-order">0
                         {/* {state.length} */}
